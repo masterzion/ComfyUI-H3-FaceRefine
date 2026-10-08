@@ -1,3 +1,9 @@
+# Keep the shared ComfyUI environment compatible with MMAudio (numpy<2.1).
+numpy>=1.21,<2.1
+# ONNX 1.19+ expects ml_dtypes float4 symbols unavailable in the compatible
+# Python 3.13 / NumPy 2.0 combination used by the shared ComfyUI environment.
+onnx==1.18.0
+ml-dtypes==0.4.1
 ultralytics
 scipy
 insightface

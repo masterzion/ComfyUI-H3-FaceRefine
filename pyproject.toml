@@ -10,6 +10,11 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
+    # Shared ComfyUI also hosts MMAudio, which requires numpy<2.1.
+    "numpy>=1.21,<2.1",
+    # Keep ONNX/ML dtypes import-compatible with Python 3.13 and NumPy 2.0.
+    "onnx==1.18.0",
+    "ml-dtypes==0.4.1",
     "ultralytics",
     "scipy",
     "insightface",
